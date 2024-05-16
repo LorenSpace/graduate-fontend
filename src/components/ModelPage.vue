@@ -66,7 +66,7 @@ function onSubmit(content: string): void {
       console.log("Response:", response.data);
       isLoading.value = false;
       // 假设你想将返回的数据存储起来，只取前三条数据
-      sentences.value = [response.data.data, ...sentences.value].slice(0, 3);
+      sentences.value = [response.data.data, ...sentences.value];
     })
     .catch((error) => {
       console.error("Error:", error);
